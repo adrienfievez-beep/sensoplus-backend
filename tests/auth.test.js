@@ -15,7 +15,7 @@ describe('Auth — /api/v1/auth', () => {
       });
 
       expect(res.status).toBe(201);
-      expect(res.body.token).toBeDefined();
+      expect(res.body.access_token).toBeDefined();
       expect(res.body.user.email).toBe(email);
       expect(res.body.user.password).toBeUndefined(); // pas de fuite de mot de passe
     });
@@ -56,7 +56,7 @@ describe('Auth — /api/v1/auth', () => {
     it('connecte avec des identifiants valides', async () => {
       const res = await agent.post('/api/v1/auth/login').send({ email, password: 'Test1234!' });
       expect(res.status).toBe(200);
-      expect(res.body.token).toBeDefined();
+      expect(res.body.access_token).toBeDefined();
       expect(res.body.user.email).toBe(email);
     });
 
