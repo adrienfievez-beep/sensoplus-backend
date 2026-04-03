@@ -58,7 +58,7 @@ async function registerUser(overrides = {}) {
 
   const res = await agent.post('/api/v1/auth/register').send(payload);
   if (res.status !== 201) throw new Error(`Register failed: ${JSON.stringify(res.body)}`);
-  return { token: res.body.token, user: res.body.user };
+  return { token: res.body.access_token, user: res.body.user };
 }
 
 /**
