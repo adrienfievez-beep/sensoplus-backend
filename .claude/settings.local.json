@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls c:/Users/adrie/sensoplus/backend/.env*)",
+      "Bash(npm install:*)",
+      "Bash(node -e \"require\\('firebase-admin'\\); console.log\\('ok'\\)\")",
+      "Bash(node -e \"require\\('socket.io'\\); console.log\\('ok'\\)\")",
+      "Bash(node --check src/server.js)",
+      "Bash(node --check src/services/socketService.js)",
+      "Bash(node --check src/services/alertService.js)",
+      "Bash(node --check src/routes/data.js)",
+      "Bash(node -e \"require\\('jest'\\); require\\('supertest'\\); console.log\\('ok'\\)\")",
+      "Bash(node --check tests/helpers.js)",
+      "Bash(node --check tests/auth.test.js)",
+      "Bash(node --check tests/data.test.js)",
+      "Bash(node --check tests/alerts.test.js)",
+      "Bash(node --check src/docs/swagger.js)",
+      "Bash(node --check src/routes/auth.js)",
+      "Bash(node --check src/services/tokenService.js)",
+      "Bash(node --check src/utils/logger.js)",
+      "Bash(node -e \"const l = require\\('./src/utils/logger'\\); l.info\\('test OK'\\); console.log\\('logger OK'\\)\")",
+      "Bash(npm show:*)"
+    ]
+  }
+}
