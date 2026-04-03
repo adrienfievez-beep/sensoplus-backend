@@ -29,7 +29,11 @@ jobs:
     env:
       NODE_ENV: test
       PORT: 3000
-      DATABASE_URL: postgresql://sensoplus:sensoplus@localhost:5432/sensoplus_test
+      DB_HOST: localhost
+      DB_PORT: 5432
+      DB_NAME: sensoplus_test
+      DB_USER: sensoplus
+      DB_PASSWORD: sensoplus
       JWT_SECRET: ${{ secrets.JWT_SECRET }}
       JWT_REFRESH_SECRET: ${{ secrets.JWT_REFRESH_SECRET }}
       ALLOWED_ORIGINS: http://localhost:3000
